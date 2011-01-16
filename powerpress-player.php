@@ -118,6 +118,7 @@ function powerpressplayer_build($media_url, $Settings, $ExtraData = array())
                         $content .= '<param name="quality" value="high" />'.PHP_EOL;
                         $content .= '<param name="menu" value="false" />'.PHP_EOL;
                         $content .= '<param name="wmode" value="transparent" />'.PHP_EOL;
+                        $content .= '<audio src="'.$media_url.'" controls><a href="'.$media_url.'" rel="enclosure" type="audio/mpeg">No Flash or HTML5 - click to play</a></audio>'.PHP_EOL;
                         $content .= '</object>'.PHP_EOL;
 			$content .= '</div>'.PHP_EOL;
 			
@@ -228,6 +229,7 @@ $content .= '<object type="application/x-shockwave-flash" data="'. powerpresspla
 $content .=  '<param name="movie" value="'. powerpressplayer_get_root_url().'player_mp3_maxi.swf" />'.PHP_EOL;
 $content .= $transparency.PHP_EOL;
 $content .= $flashvars;
+$content .= '<audio src="'.$media_url.'" controls><a href="'.$media_url.'" rel="enclosure" type="audio/mpeg">No Flash or HTML5 - click to play</a></audio>'.PHP_EOL;
 $content .= '</object>'.PHP_EOL;
 $content .= '</div>'.PHP_EOL;
 
@@ -281,6 +283,7 @@ $content .= '<param name="quality" value="high" />'.PHP_EOL;
 $content .= $transparency.PHP_EOL;
 $content .= '<param name="FlashVars" value="'.$flashvars.'" />'.PHP_EOL;
 $content .= '<embed src="'. powerpressplayer_get_root_url().'audioplay.swf?'.$flashvars.'" quality="high"  width="30" height="30" type="application/x-shockwave-flash">'.PHP_EOL;
+$content .= '<audio src="'.$media_url.'" controls><a href="'.$media_url.'" rel="enclosure" type="audio/mpeg">No Flash or HTML5 - click to play</a></audio>'.PHP_EOL;
 $content .= "</embed>\n		</object>\n";
 $content .= "</div>\n";
 			
@@ -293,6 +296,7 @@ $content .= '<param name="wmode" value="transparent" />';
 $content .= '<param name="FlashVars" value="'. get_bloginfo('url') .'?url='. urlencode($media_url).'&amp;autostart='. ($autostart?'true':'false') .'" />';
 $content .= '<param name="quality" value="high" />';
 $content .= '<embed wmode="transparent" src="'. get_bloginfo('url') .'?url='.urlencode($media_url).'&amp;autostart='. ($autostart?'true':'false') .'" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="150" height="50"></embed>';
+$content .= '<audio src="'.$media_url.'" controls><a href="'.$media_url.'" rel="enclosure" type="audio/mpeg">No Flash or HTML5 - click to play</a></audio>'.PHP_EOL;
 $content .= '</object>';
 $content .= "</div>\n";
                 }; break;
